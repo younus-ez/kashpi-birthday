@@ -1,1 +1,237 @@
-      
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Kashpi</title>
+<style>
+  :root{
+    --pink: #6fb8e8;
+    --rose: #2f8fd1;
+    --deep: #14416b;
+    --cream: #f3fbff;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; padding:0; height:100%;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg,#d4ecff,#a8d8f5,#cdeaff);
+    overflow-x:hidden;
+  }
+  .page{
+    min-height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding: 40px 20px;
+  }
+  .page.active{ display:flex; }
+
+  .card{
+    position:relative;
+    z-index:5;
+    max-width:680px;
+    background: rgba(255,255,255,0.85);
+    border-radius:24px;
+    padding:45px 38px;
+    box-shadow: 0 20px 60px rgba(20,65,107,0.25);
+    backdrop-filter: blur(6px);
+    animation: floatIn 1.2s ease-out;
+  }
+  @keyframes floatIn{
+    from{ opacity:0; transform: translateY(40px) scale(0.97);}
+    to{ opacity:1; transform: translateY(0) scale(1);}
+  }
+  h1{
+    text-align:center;
+    color: var(--rose);
+    font-size: 2.3em;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 8px rgba(47,143,209,0.3);
+  }
+  .sub{
+    text-align:center;
+    font-size:1.4em;
+    margin-bottom:25px;
+  }
+  p{
+    color:#5b1d33;
+    font-size:1.08em;
+    line-height:1.8;
+    margin: 0 0 18px 0;
+  }
+  .signature{
+    text-align:center;
+    font-size:1.5em;
+    color: var(--rose);
+    margin-top:25px;
+    font-weight:bold;
+  }
+  .repeat-line{
+    text-align:center;
+    font-size:1.2em;
+    color: var(--deep);
+    margin: 6px 0;
+    font-weight:600;
+  }
+  .btn-wrap{
+    text-align:center;
+    margin-top:35px;
+  }
+  button{
+    background: var(--rose);
+    color:white;
+    border:none;
+    padding:14px 34px;
+    border-radius:50px;
+    font-size:1.05em;
+    cursor:pointer;
+    box-shadow: 0 8px 20px rgba(47,143,209,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(47,143,209,0.5);
+  }
+
+  /* floating hearts background */
+  .heart{
+    position:absolute;
+    bottom:-50px;
+    color: rgba(255,255,255,0.7);
+    font-size: 22px;
+    pointer-events:none;
+    animation: rise linear infinite;
+    z-index:1;
+  }
+  @keyframes rise{
+    0%{ transform: translateY(0) rotate(0deg); opacity:0.9;}
+    100%{ transform: translateY(-110vh) rotate(360deg); opacity:0;}
+  }
+
+  .cake{
+    text-align:center;
+    font-size:3em;
+    margin-bottom:10px;
+  }
+
+  .polaroid{
+    position:absolute;
+    top:-22px;
+    right:-22px;
+    width:118px;
+    background:white;
+    padding:8px 8px 18px 8px;
+    border-radius:6px;
+    box-shadow: 0 10px 25px rgba(20,65,107,0.35);
+    transform: rotate(8deg);
+    z-index:6;
+  }
+  .polaroid img{
+    width:100%;
+    height:118px;
+    object-fit:cover;
+    border-radius:3px;
+    display:block;
+  }
+  .polaroid span{
+    display:block;
+    text-align:center;
+    font-size:0.65em;
+    color:#444;
+    margin-top:6px;
+    font-style:italic;
+  }
+  @media (max-width:600px){
+    .polaroid{ width:88px; top:-16px; right:-12px; }
+    .polaroid img{ height:88px; }
+  }
+
+  @media (max-width:600px){
+    .card{ padding:30px 22px; }
+    h1{ font-size:1.7em; }
+  }
+</style>
+</head>
+<body>
+
+<div id="hearts-container"></div>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div class="card">
+    <div class="polaroid">
+      <img src="us.png" alt="us">
+      <span>us 💙</span>
+    </div>
+    <div class="cake">🎂</div>
+    <h1>Happy Birthday, Kashpi. ❤️</h1>
+
+    <p>I don't know if this message will mean much to you now, but I still wanted to wish you from the bottom of my heart.</p>
+
+    <p>No matter where life takes us, you'll always hold a very special place in my heart. You were the most precious person in my life. I genuinely hope this year brings you everything you've ever dreamed of.</p>
+
+    <p>We may not be together anymore, and I respect that. But if there's one thing that hasn't changed, it's that I'll always wish the very best for you. I truly wish that you get everything you've ever wished for in life. I hope all your dreams come true. May your future be filled with love, joy, and endless blessings.</p>
+
+    <p class="repeat-line">Happy Birthday, Kashpi! 🎂💖</p>
+    <p class="repeat-line">Happy Birthday, Kashpi! 🎂💖</p>
+    <p class="repeat-line">Happy Birthday, Kashpi! 🎂💖</p>
+    <p class="repeat-line">Happy Birthday, Kashpi! 🎂💖</p>
+
+    <div class="btn-wrap">
+      <button onclick="goToPage(2)">Read More →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <div class="card">
+    <div class="cake">💌</div>
+    <h1 style="font-size:1.8em;">Thank You For Everything</h1>
+
+    <p>Happy birthday, dear. I want to respect your space and your life. Thank you for the four years we shared and for being such an important part of my journey.</p>
+
+    <p>Thank you for coming into my life and giving me four of the most beautiful years I've ever had. I always wished for a beautiful ending for us, but things didn't turn out that way. I'm grateful you were such a precious part of me. You were the only thing I had.</p>
+
+    <p>Sorry for disturbing you, but if you ever need me for anything, just ask. And I'm sorry for everything that happened.</p>
+
+    <p>I hope we won't cross paths again, not even once. ☺️</p>
+
+    <p>Again, it's your day. Happy birthday, my love of my life. ❤️❤️❤️❤️❤️</p>
+
+    <p class="signature">Wishing you all the happiness in the world, always. 🌸</p>
+
+    <div class="btn-wrap">
+      <button onclick="goToPage(1)">← Back</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function goToPage(n){
+    document.getElementById('page1').classList.toggle('active', n===1);
+    document.getElementById('page2').classList.toggle('active', n===2);
+    window.scrollTo(0,0);
+  }
+
+  // floating hearts animation
+  const container = document.getElementById('hearts-container');
+  const heartChars = ['💙','✨','🎉','🩵','⭐'];
+  function createHeart(){
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.textContent = heartChars[Math.floor(Math.random()*heartChars.length)];
+    h.style.left = Math.random()*100 + 'vw';
+    const duration = 6 + Math.random()*6;
+    h.style.animationDuration = duration + 's';
+    h.style.fontSize = (16 + Math.random()*18) + 'px';
+    container.appendChild(h);
+    setTimeout(()=> h.remove(), duration*1000);
+  }
+  setInterval(createHeart, 600);
+</script>
+
+</body>
+</html>     
